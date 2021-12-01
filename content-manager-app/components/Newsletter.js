@@ -15,7 +15,7 @@ const Newsletter = ()=>{
                     </div>
                     <div className="control">
                       <a className="button is-info">
-                        Subscribe
+                        Subscribe to chanel
                       </a>
                     </div>
                   </div>
