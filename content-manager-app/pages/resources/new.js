@@ -1,38 +1,33 @@
 import Layout from "../../components/Layout"
 import { useState } from 'react'
 import axios from 'axios'
-
+import {useRouter} from 'next/router'
 const DEFAULT_DATA = {
     title: "",
     description: "",
     link: "",
-    pioritiy: "1",
+    priority: "1",
     timeToFinish: 60,
 }
 
 function ResourceCreate() {
     const [form, setForm] = useState(DEFAULT_DATA)
-
+    const router = useRouter()
     const handleSubmit = () => {
-            axios.post('/api/resources',form)
-                .then((res) =>{
-                    alert(res?.data)
-                })
-                .catch(err=>{
-                    debugger
-                    alert(err?.response?.data)
-                })
+        axios.post("/api/resources", form)
+            .then(_ => router.push('/'))
+            .catch(err => alert(err?.response?.data));
     }
 
-    const handleReset =()=>{
+    const handleReset = () => {
         setForm(DEFAULT_DATA)
     }
 
-    const handleChange = (e)=>{
-        const {name ,value} = e.target
+    const handleChange = (e) => {
+        const { name, value } = e.target
         setForm({
             ...form,
-            [name]: value 
+            [name]: value
         })
     }
     return (
@@ -84,10 +79,10 @@ function ResourceCreate() {
                                     <label className="label">Piority</label>
                                     <div className="control">
                                         <div className="select">
-                                            <select 
-                                            value={form.pioritiy}
-                                            onChange={handleChange}
-                                            name="piority"
+                                            <select
+                                                value={form.priority}
+                                                onChange={handleChange}
+                                                name="priority"
                                             >
                                                 <option>1</option>
                                                 <option>2</option>
@@ -119,9 +114,9 @@ function ResourceCreate() {
                                         >Submit</button>
                                     </div>
                                     <div className="control">
-                                        <button 
-                                        className="button is-link is-light"
-                                        onClick={handleReset}
+                                        <button
+                                            className="button is-link is-light"
+                                            onClick={handleReset}
                                         >Cancel</button>
                                     </div>
                                 </div>
