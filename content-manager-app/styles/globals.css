@@ -17,3 +17,6 @@ a {
 .resource-form{
   margin-top: 100px;
 }
+.resrouce-list{
+  columns: 2 auto;
+}
