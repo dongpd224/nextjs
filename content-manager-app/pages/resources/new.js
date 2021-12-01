@@ -15,7 +15,7 @@ function ResourceCreate() {
     const router = useRouter()
     const handleSubmit = () => {
         axios.post("/api/resources", form)
-            .then(_ => router.push('/'))
+            .then(res => alert(res))
             .catch(err => alert(err?.response?.data));
     }
 

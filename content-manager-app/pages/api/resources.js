@@ -13,7 +13,8 @@ export default async function (req, res) {
     }
     try {
       const axiosRes = await axios.post("http://localhost:3001/api/resources", req.body)
-      return res.send(axiosRes.data)
+     // return res.send(axiosRes.data)
+      return axiosRes
     } catch {
       return status(422).send("Data has cannot be stored!")
     }

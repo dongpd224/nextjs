@@ -38,5 +38,25 @@
     "createdAt": "2021-12-01T05:35:27.497Z",
     "status": "inactive",
     "id": "1638336927497"
+  },
+  {
+    "title": "Learn HTML/CSS",
+    "description": "HTML and CSS are the beginning of everything you need to know to make your first web page! Learn both and start creating amazing websites.",
+    "link": "w3school.com",
+    "priority": "1",
+    "timeToFinish": 60,
+    "createdAt": "2021-12-01T09:12:27.927Z",
+    "status": "inactive",
+    "id": "1638349947927"
+  },
+  {
+    "title": "Learn NodeJs",
+    "description": "Master your language with lessons, quizzes, and projects designed for real-life scenarios. Create portfolio projects that showcase your new skills to help land your dream job.",
+    "link": "w3school.com",
+    "priority": "1",
+    "timeToFinish": 60,
+    "createdAt": "2021-12-01T09:13:49.802Z",
+    "status": "inactive",
+    "id": "1638350029802"
   }
 ]

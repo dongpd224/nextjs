@@ -27,11 +27,12 @@ const Navbar = ()=>{
           <a className="navbar-item is-active is-size-5 has-text-weight-semibold">
             Home
           </a>
-          <Link href="/resources/new" >
+          <Link href="/resources/new">
             <a className="navbar-item is-size-5 has-text-weight-semibold">  Add</a>
             
           </Link>
-          <a className="navbar-item is-size-5 has-text-weight-semibold">
+          <a href="/resources/1638336114973" 
+          className="navbar-item is-size-5 has-text-weight-semibold">
             Features
           </a>
         </div>
