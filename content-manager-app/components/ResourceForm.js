@@ -6,10 +6,10 @@ const DEFAULT_DATA = {
     priority: "1",
     timeToFinish: 60,
 }
-function ResourceForm(formSubmit) {
-    const [form, setForm] = useState(DEFAULT_DATA)
+function ResourceForm({onFormSubmit , initialData}) {
+    const [form, setForm] = useState(initialData || DEFAULT_DATA)
     const handleSubmit = () => {
-        formSubmit(form)
+        onFormSubmit(form)
     }
 
     const handleReset = () => {
