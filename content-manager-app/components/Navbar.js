@@ -5,7 +5,7 @@ const Navbar = ()=>{
         <nav className="navbar">
     <div className="container">
       <div className="navbar-brand">
-        <a className="navbar-item" href="../">
+        <a className="navbar-item" href="/">
           <img src="https://bulmatemplates.github.io/bulma-templates/images/bulma.png" alt="Logo"/>
         </a>
         <span className="navbar-burger burger" data-target="navbarMenu">
@@ -28,13 +28,8 @@ const Navbar = ()=>{
             Home
           </a>
           <Link href="/resources/new">
-            <a className="navbar-item is-size-5 has-text-weight-semibold">  Add</a>
-            
+            <a className="navbar-item is-size-5 has-text-weight-semibold">  Add</a>    
           </Link>
-          <a href="/resources/1638336114973" 
-          className="navbar-item is-size-5 has-text-weight-semibold">
-            Features
-          </a>
         </div>
       </div>
     </div>
