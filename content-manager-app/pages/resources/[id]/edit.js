@@ -23,30 +23,41 @@ function ResourceEdit({resource}) {
     </Layout>
     )
 }
-export async function getStaticPaths(){
-    const resData = await fetch("http://localhost:3001/api/resources")
-    const data = await resData.json()
-    const paths = data.map(resource =>{
-        return{
-            params : {id: resource.id}
-        }
-    })
+// export async function getStaticPaths(){
+//     const resData = await fetch("http://localhost:3001/api/resources")
+//     const data = await resData.json()
+//     const paths = data.map(resource =>{
+//         return{
+//             params : {id: resource.id}
+//         }
+//     })
+//     return {
+//         paths,
+//         // Fallback: False. Neu duong dan bi sai thi tra lai trang 404
+//         // Fallback: True. Neu duong dan bi sai, thi sever get Data lai roi kiem tra, neu ko co thi 404
+//         fallback: false
+//     }
+// }
+// export async function getStaticProps({params}){
+//     const dataRes = await fetch(`http://localhost:3001/api/resources/${params.id}`)
+//     const data = await dataRes.json()
+//     return{
+//         props:{
+//             resource : data
+//         },
+//         revalidate : 1
+//     }
+// }
+export async function getServerSideProps({params}) {
+    const dataRes = await fetch(`http://localhost:3001/api/resources/${params.id}`);
+    const data = await dataRes.json();
+  
     return {
-        paths,
-        // Fallback: False. Neu duong dan bi sai thi tra lai trang 404
-        // Fallback: True. Neu duong dan bi sai, thi sever get Data lai roi kiem tra, neu ko co thi 404
-        fallback: false
+      props: {
+        resource: data
+      }
     }
-}
-export async function getStaticProps({params}){
-    const dataRes = await fetch(`http://localhost:3001/api/resources/${params.id}`)
-    const data = await dataRes.json()
-    return{
-        props:{
-            resource : data
-        },
-        revalidate : 1
-    }
-}
+  }
+  
 export default ResourceEdit
 

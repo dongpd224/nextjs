@@ -1,11 +1,13 @@
 import Layout from "../../components/Layout"
 import axios from 'axios'
 import ResourceForm from "../../components/ResourceForm"
+import { useRouter } from "next/router";
 
 function ResourceCreate() {
+    const router = useRouter()
     const createResource = (formData) => {
-        axios.post("/api/resources", formData)
-            .then(res => alert(res))
+        axios.post("../api/resources", formData)
+             .then(_ => router.push("/"))
             .catch(err => alert(err?.response?.data));
     }
 

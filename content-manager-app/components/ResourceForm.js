@@ -106,7 +106,7 @@ function ResourceForm({onFormSubmit , initialData}) {
                         <button
                             className="button is-link is-light"
                             onClick={handleReset}
-                        >Cancel</button>
+                        >Reset</button>
                     </div>
                 </div>
             </form>

@@ -5,9 +5,11 @@ const Navbar = ()=>{
         <nav className="navbar">
     <div className="container">
       <div className="navbar-brand">
-        <a className="navbar-item" href="/">
+        <Link href="/">
+        <a className="navbar-item" >
           <img src="https://bulmatemplates.github.io/bulma-templates/images/bulma.png" alt="Logo"/>
         </a>
+        </Link>
         <span className="navbar-burger burger" data-target="navbarMenu">
           <span></span>
           <span></span>
