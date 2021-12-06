@@ -39,7 +39,7 @@ app.get("/api/resources/:id",(req,res)=>{
     res.send(resource)
 })
 // patch request 
-app.patch("/api/resources/:id/edit", (req, res) => {
+app.patch("/api/resources/:id", (req, res) => {
     const resources = getResources();
     const { id } = req.params;
     const index = resources.findIndex(resource => resource.id === id);
