@@ -38,35 +38,5 @@
     "createdAt": "2021-12-01T05:35:27.497Z",
     "status": "inactive",
     "id": "1638336927497"
-  },
-  {
-    "title": "Add New Resource",
-    "description": "Add New Resource",
-    "link": "Add New Resource",
-    "priority": "1",
-    "timeToFinish": 60,
-    "createdAt": "2021-12-05T10:05:02.487Z",
-    "status": "inactive",
-    "id": "1638698702487"
-  },
-  {
-    "title": "Gửi yêu cầu JavaScript Http với Axios",
-    "description": "Gửi yêu cầu JavaScript Http với Axios",
-    "link": "Gửi yêu cầu JavaScript Http với Axios",
-    "priority": "1",
-    "timeToFinish": 60,
-    "createdAt": "2021-12-05T10:36:01.665Z",
-    "status": "inactive",
-    "id": "1638700561665"
-  },
-  {
-    "title": "Gửi yêu cầu JavaScript Http với Axios",
-    "description": "Gửi yêu cầu JavaScript Http với Axios",
-    "link": "Gửi yêu cầu JavaScript Http với Axios",
-    "priority": "1",
-    "timeToFinish": 60,
-    "createdAt": "2021-12-05T10:37:35.043Z",
-    "status": "inactive",
-    "id": "1638700655043"
   }
 ]

@@ -7,26 +7,25 @@ const DEFAULT_DATA = {
     timeToFinish: 60,
 }
 function ResourceForm({onFormSubmit , initialData}) {
-    const [form, setForm] = useState(initialData || DEFAULT_DATA)
-    const handleSubmit = () => {
-        onFormSubmit(form)
-    }
+    const [form, setForm] = useState(initialData || DEFAULT_DATA);
 
-    const handleReset = () => {
-        setForm(DEFAULT_DATA)
-    }
-
+    const resetForm = () => setForm(DEFAULT_DATA)
+  
     const handleChange = (e) => {
-        const { name, value } = e.target
-        setForm({
-            ...form,
-            [name]: value
-        })
+      const { name, value } = e.target;
+      setForm({
+        ...form,
+        [name]: value
+      })
+    }
+  
+    const submitForm = () => {
+      onFormSubmit(form);
     }
     return (
         <div className="resource-form"><div className="resource-form">
             <h1 className="title">Add New Resource</h1>
-            <form>
+         
                 <div className="field mt-4">
                     <label className="label">Title</label>
                     <div className="control">
@@ -99,17 +98,17 @@ function ResourceForm({onFormSubmit , initialData}) {
                         <button
                             type="submit"
                             className="button is-link"
-                            onClick={handleSubmit}
+                            onClick={submitForm}
                         >Submit</button>
                     </div>
                     <div className="control">
                         <button
                             className="button is-link is-light"
-                            onClick={handleReset}
+                            onClick={resetForm}
                         >Reset</button>
                     </div>
                 </div>
-            </form>
+           
         </div></div>
     )
 }

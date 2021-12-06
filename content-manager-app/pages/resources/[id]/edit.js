@@ -4,10 +4,11 @@ import axios from "axios"
 
 function ResourceEdit({resource}) {
     const updateResource = (formData) => {
-        axios.patch("../api/resources",formData)
-            .then(_=>alert("Data has been Updated"))
-            .catch(err => alert(err?.response?.data));
-    }
+        axios.patch("/api/resources", formData)
+          .then(_ => alert("Data has been Updated!"))
+          .catch(err => alert(err?.response?.data));
+      }
+    
     return (
         <Layout>
         <div className="container">

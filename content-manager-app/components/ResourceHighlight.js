@@ -14,7 +14,7 @@ const ResourceHighlight = ({ resources }) => {
             </div>
             {resources.map(resource => (
               <>
-                <section className="section">
+                <section className="section" key={resource.id}>
                   <div className="columns">
                     <div className="column is-8 is-offset-2">
                       <div className="content is-medium">
