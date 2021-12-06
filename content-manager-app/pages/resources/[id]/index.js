@@ -1,6 +1,9 @@
 import Layout from "../../../components/Layout"
 import Link from "next/link"
 function ResourceDetail({resource}) {
+    const activeResource = () =>{
+        alert('Activated')
+    }
     return (
         <Layout>
             <section className="hero ">
@@ -18,6 +21,11 @@ function ResourceDetail({resource}) {
                                             Update
                                         </a>
                                         </Link>
+                                        <button 
+                                        onClick={activeResource}
+                                        className="button is-success ml-1">
+                                            Activate
+                                        </button>
                                     </div>
                                 </div>
                             </div>
