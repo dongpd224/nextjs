@@ -1,8 +1,11 @@
 import Layout from "../../../components/Layout"
 import Link from "next/link"
+import axios from "axios"
 function ResourceDetail({resource}) {
     const activeResource = () =>{
-        alert('Activated')
+        axios.patch("/api/resources",{...resource,status:"active"})
+         .then(_=> alert("Resource has been activated!"))
+         .catch(_ => alert("Cannot active the resource!"))
     }
     return (
         <Layout>
@@ -16,6 +19,7 @@ function ResourceDetail({resource}) {
                                         <h2 className="subtitle is-4">{resource.createdAt.substring(0, 10)}</h2>
                                         <h1 className="title">{resource.title}</h1>
                                         <p>{resource.description}</p>
+                                        <p>Time to Finish: {resource.timeToFinish} min</p>
                                         <Link href={`/resources/${resource.id}/edit`}>
                                         <a className="button">
                                             Update
