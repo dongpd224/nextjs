@@ -57,7 +57,7 @@ app.patch("/api/resources/:id/edit", (req, res) => {
 app.post("/api/resources",(req,res)=>{
     const resources = getResources()
     const resource = req.body
-
+    console.log("Da thuc thi")
     resource.createdAt = new Date()
     resource.status = "inactive"
     resource.id = Date.now().toString()
@@ -75,7 +75,7 @@ app.post("/api/resources",(req,res)=>{
 app.post("/api/resources", (req, res) => {
   const resources = getResources();
   const resource = req.body;
-
+  console.log("Da thuc thi")
   resource.createdAt = new Date();
   resource.status = "inactive";
   resource.id = Date.now().toString();
