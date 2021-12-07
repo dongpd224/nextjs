@@ -21,14 +21,15 @@
     "id": "1638336009567"
   },
   {
-    "title": "Learn JS",
+    "title": "Learn JS abc",
     "description": "Learn JS to build a web-site",
     "link": "fb.com",
     "priority": "2",
-    "timeToFinish": "1",
+    "timeToFinish": 46,
     "createdAt": "2021-12-01T05:21:54.972Z",
-    "status": "inactive",
-    "id": "1638336114973"
+    "status": "completed",
+    "id": "1638336114973",
+    "activationTime": "2021-12-07T10:25:45.762Z"
   },
   {
     "title": "Learn CSS",

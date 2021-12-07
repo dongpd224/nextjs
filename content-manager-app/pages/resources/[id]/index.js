@@ -20,7 +20,9 @@ function ResourceDetail({resource}) {
                                         <h1 className="title">{resource.title}</h1>
                                         <p>{resource.description}</p>
                                         <p>Time to Finish: {resource.timeToFinish} min</p>
-                                        <Link href={`/resources/${resource.id}/edit`}>
+                                        {resource.status === "inactive" &&
+                                            <>
+                                            <Link href={`/resources/${resource.id}/edit`}>
                                         <a className="button">
                                             Update
                                         </a>
@@ -30,6 +32,8 @@ function ResourceDetail({resource}) {
                                         className="button is-success ml-1">
                                             Activate
                                         </button>
+                                            </>
+                                        }
                                     </div>
                                 </div>
                             </div>
@@ -42,7 +46,7 @@ function ResourceDetail({resource}) {
     )
 }
 // export async function getStaticPaths(){
-//     const resData = await fetch("http://localhost:3001/api/resources")
+//     const resData = await fetch("${process.env.API_URL}/resources")
 //     const data = await resData.json()
 //     const paths = data.map(resource =>{
 //         return{
@@ -57,7 +61,7 @@ function ResourceDetail({resource}) {
 //     }
 // }
 // export async function getStaticProps({params}){
-//     const dataRes = await fetch(`http://localhost:3001/api/resources/${params.id}`)
+//     const dataRes = await fetch(`${process.env.API_URL}/resources/${params.id}`)
 //     const data = await dataRes.json()
 //     return{
 //         props:{
@@ -68,7 +72,7 @@ function ResourceDetail({resource}) {
 // }
 
 export async function getServerSideProps({params}) {
-    const dataRes = await fetch(`http://localhost:3001/api/resources/${params.id}`);
+    const dataRes = await fetch(`${process.env.API_URL}/resources/${params.id}`);
     const data = await dataRes.json();
   
     return {
