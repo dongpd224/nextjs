@@ -99,6 +99,13 @@ app.post("/api/resources", (req, res) => {
   })
 })
 
+// Get active resource
+app.get("/api/activeresource", (req, res) => {
+  const resources = getResources();
+  const activeResource = resources.find(resource => resource.status === "active");
+  res.send(activeResource);
+})
+
 app.listen(PORT,()=>{
     console.log(`Example app listening at http://localhost:${PORT}`);
 })
