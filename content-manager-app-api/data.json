@@ -6,8 +6,9 @@
     "priority": "1",
     "timeToFinish": 1,
     "createdAt": "2021-12-01T05:12:28.086Z",
-    "status": "inactive",
-    "id": "1638335548086"
+    "status": "completed",
+    "id": "1638335548086",
+    "activationTime": "2021-12-07T09:37:47.402Z"
   },
   {
     "title": "Learn React",
@@ -36,7 +37,7 @@
     "priority": "1",
     "timeToFinish": "1",
     "createdAt": "2021-12-01T05:35:27.497Z",
-    "status": "active",
+    "status": "completed",
     "id": "1638336927497",
     "activationTime": "2021-12-07T09:20:19.702Z"
   }

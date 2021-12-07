@@ -39,16 +39,16 @@ const ActiveResource = () => {
 
 
   const handleInactive = () => {
-    axios.patch("/api/resources", {resource, status: "inactive" })
-      .then(_ => router.push("/"))
-      .catch(_ => alert("Cannot done the resource!"))
+    axios.patch("/api/resources", {...resource, status: "completed" })
+      .then(_ => location.reload())
+      .catch(_ => alert("Cannot comnplete the resource!"))
   }
 
 
   const hasResource = resource && resource.id
   return (
     <div className="active-resource">
-      <h1 className="resource-name">{hasResource ? resource.title : "Loading...."}</h1>
+      <h1 className="resource-name">{hasResource ? resource.title : "No resource active!"}</h1>
       <div className="time-wrapper">
         {hasResource &&
           (seconds > 0 ?
@@ -70,7 +70,7 @@ const ActiveResource = () => {
       </div>
       {
         hasResource ?
-          <Link href="/">
+          <Link href={`/resources/${resource.id}`}>
             <a className="button">
               Go to resource
             </a>
