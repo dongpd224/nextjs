@@ -4,18 +4,17 @@
     "description": "Learn Nextjs to get more job and earn money",
     "link": "Nextjs.com",
     "priority": "1",
-    "timeToFinish": 60,
+    "timeToFinish": 1,
     "createdAt": "2021-12-01T05:12:28.086Z",
-    "status": "active",
-    "id": "1638335548086",
-    "activationTime": "2021-12-07T05:17:42.151Z"
+    "status": "inactive",
+    "id": "1638335548086"
   },
   {
     "title": "Learn React",
     "description": "The most common JS library",
     "link": "react.com",
     "priority": "1",
-    "timeToFinish": 60,
+    "timeToFinish": 1,
     "createdAt": "2021-12-01T05:20:09.567Z",
     "status": "inactive",
     "id": "1638336009567"
@@ -25,7 +24,7 @@
     "description": "Learn JS to build a web-site",
     "link": "fb.com",
     "priority": "2",
-    "timeToFinish": 60,
+    "timeToFinish": "1",
     "createdAt": "2021-12-01T05:21:54.972Z",
     "status": "inactive",
     "id": "1638336114973"
@@ -35,9 +34,10 @@
     "description": "Learn Css to get more job",
     "link": "css.com",
     "priority": "1",
-    "timeToFinish": 60,
+    "timeToFinish": "1",
     "createdAt": "2021-12-01T05:35:27.497Z",
-    "status": "inactive",
-    "id": "1638336927497"
+    "status": "active",
+    "id": "1638336927497",
+    "activationTime": "2021-12-07T09:20:19.702Z"
   }
 ]

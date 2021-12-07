@@ -1,11 +1,13 @@
 import Layout from "../../../components/Layout"
 import ResourceForm from "../../../components/ResourceForm"
 import axios from "axios"
+import { useRouter } from "next/router"
 
 function ResourceEdit({resource}) {
+  const router = useRouter()
     const updateResource = (formData) => {
         axios.patch("/api/resources", formData)
-          .then(_ => alert("Data has been Updated!"))
+          .then(_ => router.push(`/resources/${resource.id}`))
           .catch(err => alert(err?.response?.data));
       }
     
